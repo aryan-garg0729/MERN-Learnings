@@ -1,0 +1,163 @@
+*show dbs: shows all db present
+*db: shows current db
+*use practice : use db practice if present or create new
+*show collections: show all collenctions in current db
+
+*****************************************INSERTION************************************************
+*db.thapadata.insertOne({name:"react",type:"front",videos:80,active:true})
+{
+  acknowledged: true,
+  insertedId: ObjectId("647c238d959b76a49fc6c744")
+}
+
+*db.thapadata.find().pretty()
+[
+  {
+    _id: ObjectId("647c238d959b76a49fc6c744"),
+    name: 'react',
+    type: 'front',
+    videos: 80,
+    active: true
+  }
+]
+
+*db.thapadata.insertMany([{name:"node",type:"back",videos:70,active:true},{name:"javascr",type:"front",vid:45,active:true}]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("647c26cf61762b54b4f70144"),
+    '1': ObjectId("647c26cf61762b54b4f70145")
+  }
+}
+
+************************************ FIND : db.collection.find(query,projection)********************************
+*db.thapadata.find()
+[
+  {
+    _id: ObjectId("647c238d959b76a49fc6c744"),
+    name: 'react',
+    type: 'front',
+    videos: 80,
+    active: true
+  },
+  {
+    _id: ObjectId("647c26cf61762b54b4f70144"),
+    name: 'node',
+    type: 'back',
+    videos: 70,
+    active: true
+  },
+  {
+    _id: ObjectId("647c26cf61762b54b4f70145"),
+    name: 'javascr',
+    type: 'front',
+    vid: 45,
+    active: true
+  }
+]
+
+*db.thapadata.find({name:"react"})
+[
+  {
+    _id: ObjectId("647c238d959b76a49fc6c744"),
+    name: 'react',
+    type: 'front',
+    videos: 80,
+    active: true
+  }
+]
+
+*db.thapadata.find({name:"react"},{name:1,active:1})
+[
+  {
+    _id: ObjectId("647c238d959b76a49fc6c744"),        //_id comes by default
+    name: 'react',
+    active: true
+  }
+]
+
+*db.thapadata.find({name:"react"},{ _id:0, name:1, active:1})
+[ { name: 'react', active: true } ]
+
+*db.thapadata.find({active:true}).limit(1)      // .limit(n) shows first 'n' matches
+[
+  {
+    _id: ObjectId("647c238d959b76a49fc6c744"),
+    name: 'react',
+    type: 'front',
+    videos: 80,
+    active: true
+  }
+]
+
+*db.thapadata.findOne({active:true})     //gives first match
+{
+  _id: ObjectId("647c238d959b76a49fc6c744"),
+  name: 'react',
+  type: 'front',
+  videos: 80,
+  active: true
+}
+
+
+*db.thapadata.find()
+[
+  {
+    _id: ObjectId("647c238d959b76a49fc6c744"),
+    name: 'react',
+    type: 'front',
+    videos: 80,
+    active: true
+  },
+  {
+    _id: ObjectId("647c26cf61762b54b4f70144"),
+    name: 'node',
+    type: 'back',
+    videos: 70,
+    active: true
+  },
+  {
+    _id: ObjectId("647c26cf61762b54b4f70145"),
+    name: 'javascr',
+    type: 'front',
+    vid: 45,
+    active: true
+  }
+]
+
+*db.thapadata.find({active:true}).limit(1).skip(1)     // skips first n matches and then limit prints only one match after that
+[
+  {
+    _id: ObjectId("647c26cf61762b54b4f70144"),
+    name: 'node',
+    type: 'back',
+    videos: 70,
+    active: true
+  }
+]
+
+******************************UPDATE : db.collection.update(filter,update)***********************************
+*db.thapadata.updateOne({name:"javascr"},{ $set : { type : "fullstack" } } )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+*db.thapadata.updateMany({type:"front"},{$set:{active:false}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,      //NOTE: matchedCount > 1, all occerences modified
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+
+******************************************DELETE************************************
+*db.thapadata.deleteMany({active:false})
+{ acknowledged: true, deletedCount: 2 }
+
+*db.thapadata.deleteMany({})    // deletes all documents
+{ acknowledged: true, deletedCount: 1 }

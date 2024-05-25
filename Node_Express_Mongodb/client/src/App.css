@@ -1,0 +1,28 @@
+input{
+    font-size: 102.5%;
+    border: none;
+    border-bottom: 1px solid #acacac;
+    outline: none;
+    margin-bottom: 1rem;
+}
+.form-submit{
+    background-color: #FF0054 !important;
+    border: none;
+}
+.form-submit:hover{
+    background-color: #cd0447 !important;
+    border: none;
+}
+.registered{
+    text-decoration: none;
+    font-weight: 700;
+}
+/* div{
+    border: 2px solid rebeccapurple
+} */
+signup-form{
+}
+form-group{
+}
+.signup-img{
+}

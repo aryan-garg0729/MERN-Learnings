@@ -1,0 +1,40 @@
+.card{
+    overflow: hidden;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 2px 5px 10px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    /* text-align: center; */
+    width: 100%;
+    /* height:8rem; */
+    /* border: 2px solid rebeccapurple; */
+}
+img{
+    width:inherit;
+}
+.card_info{
+    font-family:'Courier New', Courier, monospace;
+    padding: 0.65rem;
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    /* border: 2px solid rebeccapurple; */
+}
+.card_category{
+    font-weight: 700;
+    color: rgb(146, 146, 140);
+}
+button{
+    padding: 3px;
+    background-color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    border: 2px solid grey;
+    border-radius: 3px;
+}
+button:hover{
+    cursor: pointer;
+}

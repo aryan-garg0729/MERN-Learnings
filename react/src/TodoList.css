@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.center_div{
+    width: 25%;
+    height: 80vh;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.503);
+    border-radius: 15px;
+    /* overflow: scroll; */
+}
+.main_div{
+    width: 100%;
+    height: 100vh;
+    background: #6983aa;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    color: white;
+    background: transparent;
+    background-color: #8566aa;
+    padding: 6px 0 2px 0;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.519);
+}
+input{
+    text-align: center;
+    height: 30px;
+    top:10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    width: 60%;
+    border-bottom: 2px solid #8566aa;
+    outline: none;
+}
+.btn{
+    min-height: 40px;
+    width: 45px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #8566aa;
+    color: white;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.519);
+}
+.btn:hover{
+    background-color: #20bf6b;
+}
+.xbtn{
+    margin-right: 1.25rem;
+    min-height: 10px;
+    width: 17px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #8566aa;
+    color: white;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.519);
+}
+.xbtn:hover{
+    background-color: #bf2033;
+}
+ol{
+    margin-top: 30px;
+
+}
+
+ol li{
+    padding-left: 0;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #8566aa;
+    text-transform: capitalize;
+}
+
+.todo_style{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+@media (max-width:768px) {
+    .center_div{
+        width: 55%;
+
+    }
+    .todo_style .fa-times{
+        margin: 0 15px 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        margin-left: 5px;
+        min-height: 40px;
+        width: 40px;
+        color: white;
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+</head>
+
+<body>
+    {{>navbar}}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 mx-auto">
+                <form action="/register" method="post">
+                    <input type="text" name="name" placeholder="name"><br><br>
+                    <input type="number" name="phone" placeholder="phone"><br><br>
+                    <input type="radio" name="gender" value="male" id="m"><label for="m">male</label>
+                    <input type="radio" name="gender" value="female" id="f"><label for="f">female</label><br><br>
+                    <input type="email" name="email" placeholder="email"><br><br>
+                    <input type="password" name="password" placeholder="password"><br><br>
+                    <input type="password" name="confirm_password" placeholder="confirm password"><br><br>
+                    <input type="submit" class="btn btn-primary" value="register">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    {{>footer}}
+</body>
+
+</html>

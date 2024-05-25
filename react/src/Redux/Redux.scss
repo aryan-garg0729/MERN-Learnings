@@ -1,0 +1,49 @@
+// div ,ul, li{
+//     border: 2px solid red;
+// }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(107, 65, 130);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .admin-table{
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: gray;
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        button{
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+            background-color: rgb(127, 12, 189);
+    
+            &:hover{
+                background-color: rgba(62, 0, 128, 0.863);
+            }
+        }
+        
+        
+    }
+}

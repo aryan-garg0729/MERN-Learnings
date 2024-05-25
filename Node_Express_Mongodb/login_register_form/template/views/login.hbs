@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerLinks}}
+</head>
+
+<body>
+    {{>navbar}}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 mx-auto">
+                <form action="/login" method="post">
+                    <input type="email" name="email" placeholder="email"><br><br>
+                    <input type="password" name="password" placeholder="password"><br><br>
+                    <input type="submit" class="btn btn-primary" value="login">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    {{>footer}}
+</body>
+
+</html>
